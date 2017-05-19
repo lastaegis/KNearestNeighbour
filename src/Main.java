@@ -1,5 +1,4 @@
 import java.io.File;
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
@@ -101,6 +100,9 @@ public class Main {
         K = scanner.nextInt();
     }
 
+    /**
+     * Menghitung chiSquare
+     */
     private static void chiSquare()
     {
         for (int i = 0; i < lengthRow; i++)
@@ -117,6 +119,9 @@ public class Main {
         }
     }
 
+    /**
+     * Memandingkan data ranking dan menampilkan hasil
+     */
     private static void getResult()
     {
         Arrays.sort(ranking, new Comparator<float[]>() {
