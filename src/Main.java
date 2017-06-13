@@ -69,7 +69,7 @@ public class Main {
                 {
                     for (int j = 0; j < lengthColumn; j++)
                     {
-                        irisData[i][j] = Float.parseFloat(newValue[j]);
+                        irisData[i][j] = parseFloat(newValue[j]);
                     }
                 }
                 lastState++;
@@ -153,5 +153,25 @@ public class Main {
         });
 
         System.out.println("Hasilnya adalah "+scoring[0][0]);
+    }
+
+    /**
+     * Backward compactibiltu
+     * @param String number
+     * @return float
+     */
+    private static float parseFloat(String number)
+    {
+        if (number != null && number.length() > 0) {
+            try
+            {
+                return Float.parseFloat(number);
+            }
+            catch(Exception e)
+            {
+                return -1;
+            }
+        }
+        else return 0;
     }
 }
